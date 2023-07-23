@@ -1,0 +1,17 @@
+3 parties :
+
+- Un agrégateur
+    Recuperer les datas
+        - essayer d'envoyer des requêtes http pour recup le html
+        - sinon -> scrapper le site
+    Trier les datas 
+        - Conserver uniquement les cotes et le resultat
+
+- Un estimateur
+    Avant tout plot les donnees au cas où f:cotes->probas aurait une apparence intéressante
+    - si oui moindres carrés ?
+    - sinon mini réseau de neurones
+
+- Une interface
+    Entrée : cotes 
+    Sortie : proba de chaque issue
