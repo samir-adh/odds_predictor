@@ -24,7 +24,7 @@ def create_database():
 
 def fill_database():
     driver = create_webdriver()
-    url = "https://www.oddsportal.com/football/france/ligue-1-2022-2023/results/"
+    url = "https://www.oddsportal.com/football/england/premier-league-2019-2020/results/"
     odds = get_all_content(driver=driver, base_url=url, n_pages=8)
     connection = sqlite3.connect("./static/odds.db")
     cursor = connection.cursor()
@@ -59,6 +59,4 @@ def delete_database():
 
 
 if __name__ == "__main__":
-    delete_database()
-    create_database()
     fill_database()
